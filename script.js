@@ -1,76 +1,59 @@
-let receitas = JSON.parse(localStorage.getItem("receitas")) || [];
+body{
 
-function adicionar(){
-
-let receita = {
-nome:document.getElementById("nome").value,
-ingredientes:document.getElementById("ingredientes").value,
-preparo:document.getElementById("preparo").value,
-quantidade:document.getElementById("quantidade").value,
-tipo:document.getElementById("tipo").value,
-preco:document.getElementById("preco").value
-}
-
-receitas.push(receita);
-
-localStorage.setItem("receitas", JSON.stringify(receitas));
-
-mostrar();
-
-limpar();
-}
-
-function mostrar(){
-
-let html="";
-
-receitas.forEach((r,index)=>{
-
-html += `
-
-<div class="card">
-
-<h3>${r.nome}</h3>
-
-<p><b>Tipo:</b> ${r.tipo}</p>
-
-<p><b>Quantidade:</b> ${r.quantidade}</p>
-
-<p><b>Preço:</b> ${r.preco}</p>
-
-<p><b>Ingredientes:</b><br>${r.ingredientes}</p>
-
-<p><b>Preparo:</b><br>${r.preparo}</p>
-
-<button onclick="remover(${index})">Remover</button>
-
-</div>
-
-`;
-
-});
-
-document.getElementById("lista").innerHTML = html;
+font-family:Arial;
+background:#f4f4f4;
+padding:20px;
 
 }
 
-function remover(index){
+h1{
 
-receitas.splice(index,1);
-
-localStorage.setItem("receitas", JSON.stringify(receitas));
-
-mostrar();
+text-align:center;
 
 }
 
-function limpar(){
+.form{
 
-document.getElementById("nome").value="";
-document.getElementById("ingredientes").value="";
-document.getElementById("preparo").value="";
-document.getElementById("quantidade").value="";
-document.getElementById("preco").value="";
+background:white;
+padding:15px;
+border-radius:10px;
+margin-bottom:20px;
+
 }
 
-mostrar();
+input, textarea, select{
+
+width:100%;
+padding:10px;
+margin-top:8px;
+
+}
+
+button{
+
+background:#ff6600;
+color:white;
+border:none;
+padding:12px;
+margin-top:10px;
+width:100%;
+border-radius:6px;
+
+}
+
+.card{
+
+background:white;
+padding:12px;
+border-radius:10px;
+margin-top:10px;
+
+}
+
+img{
+
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+
+}
