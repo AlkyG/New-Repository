@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Comidinhas Caseiras</title>
+<title>Comidinhas Anti-iFood</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -20,11 +20,17 @@
 
 <input id="nome" placeholder="Nome da comida">
 
-<textarea id="ingredientes" placeholder="Ingredientes"></textarea>
+<input id="foto" placeholder="Link da foto">
+
+<textarea id="ingredientes" placeholder="Ingredientes (separe por vírgula)"></textarea>
 
 <textarea id="preparo" placeholder="Modo de preparo"></textarea>
 
 <input id="quantidade" placeholder="Quantidade">
+
+<input id="preco" placeholder="Preço caseiro">
+
+<input id="precoIfood" placeholder="Preço no iFood">
 
 <select id="tipo">
 
@@ -35,15 +41,29 @@
 
 </select>
 
-<input id="preco" placeholder="Preço">
-
 <button onclick="adicionar()">Adicionar</button>
 
 </div>
 
-<h2>Lista</h2>
+<div class="acoes">
+
+<button onclick="sortear()">🎲 Sortear jantar</button>
+
+<h3 id="resultado"></h3>
+
+</div>
+
+<h2>💰 Economia total</h2>
+
+<h3 id="economia"></h3>
+
+<h2>📋 Lista de comidas</h2>
 
 <div id="lista"></div>
+
+<h2>🛒 Lista de mercado</h2>
+
+<div id="mercado"></div>
 
 <script src="script.js"></script>
 
