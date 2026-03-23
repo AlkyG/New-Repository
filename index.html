@@ -1,1 +1,52 @@
-Add file → Create new file
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Comidinhas Caseiras</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>🍔 Comidinhas Anti-iFood</h1>
+
+<div class="form">
+
+<input id="nome" placeholder="Nome da comida">
+
+<textarea id="ingredientes" placeholder="Ingredientes"></textarea>
+
+<textarea id="preparo" placeholder="Modo de preparo"></textarea>
+
+<input id="quantidade" placeholder="Quantidade">
+
+<select id="tipo">
+
+<option>Lanche</option>
+<option>Doce</option>
+<option>Salgado</option>
+<option>Bebida</option>
+
+</select>
+
+<input id="preco" placeholder="Preço">
+
+<button onclick="adicionar()">Adicionar</button>
+
+</div>
+
+<h2>Lista</h2>
+
+<div id="lista"></div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
